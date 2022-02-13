@@ -22,7 +22,7 @@ title: bitbybit
 email: ryan.bitbybit@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Bit by bit is a coding and technology tutorial resource. This will be used to learn and teach about 
-  topics in software engineering and techology.
+  topics in software engineering and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: bit_by_bits
