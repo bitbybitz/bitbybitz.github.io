@@ -12,12 +12,9 @@ Jekyll is a popular static site generator which takes Markdown and HTML and crea
 Before you can start using jekyll to create your blog, you will need to install ruby, jekyll, git, and VS Code. I’ll wont walk  through the entire installation process and setup on macOS so this will mainly be a walkthrough of the setup and deployment process
 
 ## Install Software
-
-Ruby
-
-Jekyll
-
-VS Code
+- Ruby
+- Jekyll
+- VS Code
 
 ## Create a Repository for Your Site
 
@@ -43,55 +40,54 @@ mkdir bitbybit-blog
 git init
 ```
 
-1. Choose a publishing source
+5. Choose a publishing source
     1. The default publishing source for user and organization sites is the root of the default branch for the repo. The default branch for project sites is the root of the gh-pages branch
     2. You can publish your site from any branch in the repo, either from the root of the repo on that branch or from the /docs folder on that branch.
     3. If you choose the /docs folder of any branch, github pages will read everything to publish your site, including the CNAME file from the docs folder. This would be set up if you wanted to use a custom domain for you github pages site.
-2. Create a new jekyll site 
+6. Create a new jekyll site 
 
 ```jsx
 jekyll new --skip-bundle .
 ```
 
-1. Open the Gemfile that jekyll created and add a # to the beginning of the line that starts with gem “jekyll” to comment out this line
-2. Add the github-pages gem by editing the line starting with # gem “github-pages” to 
+7. Open the Gemfile that jekyll created and add a # to the beginning of the line that starts with gem “jekyll” to comment out this line
+8. Add the github-pages gem by editing the line starting with # gem “github-pages” to 
 
 ```jsx
 gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
 ```
 
-1. Save and close the gemfile then 
+9. Save and close the gemfile then 
 
 ```jsx
 bundle install
 ```
 
-1. Serve will throw an error below because of a versioning issue so make sure you go to link
-2. You can test your site locally using the following command
+10. You can test your site locally using the following command
 
 ```jsx
 bundle exec jekyll serve
 ```
 
-1. Add and commit your work
+11. Add and commit your work
 
 ```jsx
 git add .
 git commit -m "Initial github pages site with jekyll"
 ```
 
-1. Add your repo on github as a remote 
+12. Add your repo on github as a remote 
 
 ```jsx
 git remote add origin https://github.com/bitbybitz/bitbybitz.github.io.git
 ```
 
-1. Push the repo to github
+13. Push the repo to github
 
 ```jsx
 git push -u origin main
 ```
 
-1. On github, navigate to your repo and under the repo name click **settings**
-2. In the **Code & Operations** section click **Pages**
-3. To see your published site under **Github Pages** click your site’s URL
+14. On github, navigate to your repo and under the repo name click **settings**
+15. In the **Code & Operations** section click **Pages**
+16. To see your published site under **Github Pages** click your site’s URL
