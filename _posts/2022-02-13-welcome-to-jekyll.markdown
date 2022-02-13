@@ -1,29 +1,97 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Github Pages & Jekyll!"
 date:   2022-02-13 14:47:46 -0500
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+## What Is Jekyll
 
-`YEAR-MONTH-DAY-title.MARKUP`
+Jekyll is a popular static site generator which takes Markdown and HTML and creates a complete static site with this content. You can specify the design and layout template on your own. Tweak the site’s look and feel, URLs, data displayed on the page and more. 
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Before you can start using jekyll to create your blog, you will need to install ruby, jekyll, git, and VS Code. I’ll wont walk  through the entire installation process and setup on macOS so this will mainly be a walkthrough of the setup and deployment process
 
-Jekyll also offers powerful support for code snippets:
+## Install Software
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Ruby
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Jekyll
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+VS Code
+
+## Create a Repository for Your Site
+
+1. In the upper right corner of your github, click the plus button and select **New Repository**
+2. Use the **Owner** drop down and select the account you want as owner of the repo.
+3. Type the name of your repo. If you are creating an org or user site, the repo must be named <user>.github.io or <org>.github.io
+4. Choose your repo’s visibility as public.
+
+## Create Your Site
+
+Before you create the site, you will need a repository for your site on github.
+
+1. Open your terminal
+2. Navigate to the location where you want to store your sites source files and create a directory for your repository. 
+
+```jsx
+mkdir bitbybit-blog
+```
+
+1. Initialize your local git repository
+
+```jsx
+git init
+```
+
+1. Choose a publishing source
+    1. The default publishing source for user and organization sites is the root of the default branch for the repo. The default branch for project sites is the root of the gh-pages branch
+    2. You can publish your site from any branch in the repo, either from the root of the repo on that branch or from the /docs folder on that branch.
+    3. If you choose the /docs folder of any branch, github pages will read everything to publish your site, including the CNAME file from the docs folder. This would be set up if you wanted to use a custom domain for you github pages site.
+2. Create a new jekyll site 
+
+```jsx
+jekyll new --skip-bundle .
+```
+
+1. Open the Gemfile that jekyll created and add a # to the beginning of the line that starts with gem “jekyll” to comment out this line
+2. Add the github-pages gem by editing the line starting with # gem “github-pages” to 
+
+```jsx
+gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
+```
+
+1. Save and close the gemfile then 
+
+```jsx
+bundle install
+```
+
+1. Serve will throw an error below because of a versioning issue so make sure you go to link
+2. You can test your site locally using the following command
+
+```jsx
+bundle exec jekyll serve
+```
+
+1. Add and commit your work
+
+```jsx
+git add .
+git commit -m "Initial github pages site with jekyll"
+```
+
+1. Add your repo on github as a remote 
+
+```jsx
+git remote add origin https://github.com/bitbybitz/bitbybitz.github.io.git
+```
+
+1. Push the repo to github
+
+```jsx
+git push -u origin main
+```
+
+1. On github, navigate to your repo and under the repo name click **settings**
+2. In the **Code & Operations** section click **Pages**
+3. To see your published site under **Github Pages** click your site’s URL
