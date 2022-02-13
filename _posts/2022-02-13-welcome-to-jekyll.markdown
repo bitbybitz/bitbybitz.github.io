@@ -5,26 +5,29 @@ date:   2022-02-13 14:47:46 -0500
 categories: jekyll update
 ---
 
-## What Is Jekyll
+## Links
+- [Github Docs](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Markdown Editor](https://dillinger.io/)
 
+## What Is Jekyll
 Jekyll is a popular static site generator which takes Markdown and HTML and creates a complete static site with this content. You can specify the design and layout template on your own. Tweak the site’s look and feel, URLs, data displayed on the page and more. 
 
 Before you can start using jekyll to create your blog, you will need to install ruby, jekyll, git, and VS Code. I’ll wont walk  through the entire installation process and setup on macOS so this will mainly be a walkthrough of the setup and deployment process
 
 ## Install Software
-- Ruby
-- Jekyll
-- VS Code
+- [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+- [Bundler](https://bundler.io/)
+- [Jekyll](https://jekyllrb.com/docs/installation/)
+- [VS Code](https://code.visualstudio.com/download)
 
 ## Create a Repository for Your Site
-
 1. In the upper right corner of your github, click the plus button and select **New Repository**
 2. Use the **Owner** drop down and select the account you want as owner of the repo.
 3. Type the name of your repo. If you are creating an org or user site, the repo must be named <user>.github.io or <org>.github.io
 4. Choose your repo’s visibility as public.
 
 ## Create Your Site
-
 Before you create the site, you will need a repository for your site on github.
 
 1. Open your terminal
